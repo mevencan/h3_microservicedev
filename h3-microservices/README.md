@@ -19,18 +19,18 @@ Pour lancer le projet en local, il suffit de lancer la commande suivante :
 
 ## Schéma
 
-![Schema](https://cdn.discordapp.com/attachments/671675995530461195/1194293071962189866/h3microservice.png?ex=65afd319&is=659d5e19&hm=cdd05f1607f4c5ef672c05b5083e2491760f0585bbe77e5d17e986afa0cb36b6&)
+![Schema](https://cdn.discordapp.com/attachments/1022814138021449829/1194296058973528104/image.png?ex=65afd5e1&is=659d60e1&hm=96c51fa779e6894d4922b97b7baff8c1430e85f4e0315fead7ab25aadd5004fb&)
 
 ## Screenshots
 
 1. **Afficher toutes les villes :**
 
 - Depuis postman
-  ![Postman](https://media.discordapp.net/attachments/1145486495839432714/1194266704033894520/CleanShot_2024-01-09_at_14.09.252x.png?ex=65afba8a&is=659d458a&hm=137672a396a5927160043bd3491390063f5d62fbdd06d1b01c4bb84458094f9c&=&format=webp&quality=lossless&width=1848&height=1208)
+  ![Postman](https://cdn.discordapp.com/attachments/1022814138021449829/1194295503354081351/CleanShot_2024-01-09_at_16.03.522x.png?ex=65afd55c&is=659d605c&hm=ca1557e7c8cad8d44ee0799ff04527d353c9158ce6eba0fa84cedfae343d1861&)
 
 - Depuis le navigateur
-  ![Postman](https://cdn.discordapp.com/attachments/1145486495839432714/1194267102811521034/CleanShot_2024-01-09_at_14.10.522x.png?ex=65afbae9&is=659d45e9&hm=711079ecc50cbbf6d601561c3b1be54a5ee31174bdc8b08e8da733d163448a05&)
+  ![Postman](https://cdn.discordapp.com/attachments/1022814138021449829/1194295843071721514/CleanShot_2024-01-09_at_16.05.112x.png?ex=65afd5ad&is=659d60ad&hm=3f89f06cf5269ceb65d9b86fa145cadbd0ecd6ba8886e86df684c1afad2cca5c&)
 
 2. **Créer une ville :**
 
-![App Screenshot](https://cdn.discordapp.com/attachments/1145486495839432714/1194267568307961946/CleanShot_2024-01-09_at_14.12.442x.png?ex=65afbb58&is=659d4658&hm=00e232c431502f0fae88eee69d06e1b90717fc16a2c0de898a511eaa4526a21b&)
+![App Screenshot](https://cdn.discordapp.com/attachments/1022814138021449829/1194295315268902972/CleanShot_2024-01-09_at_16.02.572x.png?ex=65afd530&is=659d6030&hm=c69a41067a76933d4ce375f777f09c9ecdb58e50c59462390f89ce6e103ce28d&)

@@ -1,0 +1,43 @@
+# Version du format Docker Compose
+version: '3.1'
+
+# Définition des services (conteneurs) de votre application
+services:
+  # Service "back" pour votre backend
+  back:
+    build: ./back  # Construire l'image du backend à partir du répertoire "./back"
+    container_name: back  # Nom du conteneur
+    ports:
+      - "3000:3000"  # Mappage du port 3000 du conteneur au port 3000 de l'hôte
+    networks:
+      - my-network  # Utilisation du réseau "my-network"
+    depends_on:
+      - mongo  # Dépendance du service "mongo"
+
+  # Service "mongo" pour votre base de données MongoDB
+  mongo:
+    image: mongo  # Utilisation de l'image Docker MongoDB officielle depuis Docker Hub
+    ports:
+      - ${MONGODB_PORT}:${MONGODB_DOCKER_PORT}  # Mappage des ports MongoDB
+    networks:
+      - my-network  # Utilisation du réseau "my-network"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}  # Utilisateur root de MongoDB
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}  # Mot de passe root de MongoDB
+    env_file:
+      - .env  # Chargement des variables d'environnement depuis le fichier ".env"
+
+  # Service "nginx" pour votre frontend
+  nginx:
+    image: nginx:latest  # Utilisation de l'image Docker NGINX la plus récente depuis Docker Hub
+    container_name: nginx  # Nom du conteneur
+    ports:
+      - "80:80"  # Mappage du port 80 du conteneur au port 80 de l'hôte
+    volumes:
+      - ./front:/usr/share/nginx/html  # Montage du répertoire "front" local dans le répertoire racine du serveur NGINX
+    networks:
+      - my-network  # Utilisation du réseau "my-network"
+
+# Définition d'un réseau personnalisé "my-network" pour que les services puissent communiquer entre eux
+networks:
+  my-network:
